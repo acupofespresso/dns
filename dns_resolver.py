@@ -30,13 +30,8 @@ def get_cname_records(domain):
 
 def test_latency(ip):
     try:
-        start_time = time.time()
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(1)
-        sock.connect((ip, 80))
-        sock.close()
-        end_time = time.time()
-        return (end_time - start_time) * 1000
+        import ping3
+        return ping3.ping(ip) * 1000
     except Exception as e:
         return float('inf')
 

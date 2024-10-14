@@ -4,13 +4,34 @@ This repository contains scripts and configurations related to DNS management.
 
 ## Features
 
-- DNS server setup
-- DNS zone file management
-- DNS query tools
+- DNS resolution for A and CNAME records.
+- Latency testing using a ping-like method.
+
+## Installation
+
+To install the required dependencies, run the following command:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
 
-To use the scripts and configurations in this repository, follow the instructions in the respective directories.
+To use the `dns_resolver.py` script, run the following command:
+
+```bash
+echo "your_domain_here" | python3 dns_resolver.py
+```
+
+Replace `your_domain_here` with the domain you want to check.
+
+### Example
+
+To check the domain `example.com`, run:
+
+```bash
+echo "example.com" | python3 dns_resolver.py
+```
 
 ## Contributing
 
